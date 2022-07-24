@@ -99,7 +99,7 @@ func DeleteProduct(c *fiber.Ctx) error {
 	return c.Status(200).JSON(res)
 }
 
-func FindProducts(c *fiber.Ctx) error {
+func FindProduct(c *fiber.Ctx) error {
 
 	var products = make(map[string]interface{})
 	success, documents := models.FindDocument("Products")
