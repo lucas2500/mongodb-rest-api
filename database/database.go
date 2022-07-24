@@ -10,8 +10,9 @@ import (
 )
 
 var (
-	Client *mongo.Client
-	DbCtx  context.Context
+	Client   *mongo.Client
+	DbCtx    context.Context
+	MongoURI string
 )
 
 func InitDatabase() {
@@ -19,7 +20,7 @@ func InitDatabase() {
 	var err error
 	DbCtx = context.Background()
 
-	Client, err = mongo.Connect(DbCtx, options.Client().ApplyURI("mongodb+srv://lucas2500:followyou@cluster0.7k8ipyc.mongodb.net/?retryWrites=true&w=majority"))
+	Client, err = mongo.Connect(DbCtx, options.Client().ApplyURI(MongoURI))
 
 	if err != nil {
 		log.Fatal("There was an error when tryting to connect to MongoDB!!")

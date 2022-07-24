@@ -5,6 +5,7 @@ import (
 	"mongodb-rest-api/database"
 	"mongodb-rest-api/entities"
 	"mongodb-rest-api/routes"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
@@ -17,6 +18,8 @@ func init() {
 	if err != nil {
 		log.Fatal("There was an error when trying to load .env file!!", err)
 	}
+
+	database.MongoURI = os.Getenv("MONGO_URI")
 
 }
 
