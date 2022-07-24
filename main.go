@@ -20,7 +20,6 @@ func init() {
 	}
 
 	database.MongoURI = os.Getenv("MONGO_URI")
-
 }
 
 func main() {
@@ -35,7 +34,6 @@ func main() {
 	routes.SetupRoutes(app)
 
 	app.Listen(":3000")
-
 }
 
 func Hello(c *fiber.Ctx) error {

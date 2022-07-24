@@ -44,13 +44,13 @@ func UpsertProduct(c *fiber.Ctx) error {
 				Success: false,
 			})
 
-			res.Message = "One or more product(s) could not be upserted!!"
-		}
+		} else {
 
-		res.Products = append(res.Products, entities.ProductResponse{
-			Code:    body.Products[i].Code,
-			Success: true,
-		})
+			res.Products = append(res.Products, entities.ProductResponse{
+				Code:    body.Products[i].Code,
+				Success: true,
+			})
+		}
 	}
 
 	res.Message = "Upsert finished!!"
@@ -86,13 +86,12 @@ func DeleteProduct(c *fiber.Ctx) error {
 				Success: false,
 			})
 
-			res.Message = "One or more product(s) could not be deleted!!"
+		} else {
+			res.Products = append(res.Products, entities.ProductResponse{
+				Code:    body.Products[i].Code,
+				Success: true,
+			})
 		}
-
-		res.Products = append(res.Products, entities.ProductResponse{
-			Code:    body.Products[i].Code,
-			Success: true,
-		})
 	}
 
 	res.Message = "Delete finished!!"
