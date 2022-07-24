@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "e4010c62-e723-4b67-a48b-fd2ea3939199",
+		"name": "Mongo Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11500905"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Products\": [\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"123\",\r\n            \"Barcode\": \"125\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"1998\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"50509019\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"sss\",\r\n            \"Code\": \"dwdwdwd\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/Product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Products\": [\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"123\",\r\n            \"Barcode\": \"125\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"1998\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"teste\",\r\n            \"Code\": \"50509019\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        },\r\n        {\r\n            \"Name\": \"sss\",\r\n            \"Code\": \"dwdwdwd\",\r\n            \"Barcode\": \"1998\",\r\n            \"Active\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/Product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/Product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
