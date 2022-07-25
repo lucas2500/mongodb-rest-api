@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"mongodb-rest-api/database"
-	"mongodb-rest-api/entities"
 	"mongodb-rest-api/routes"
 	"os"
 
@@ -38,8 +37,9 @@ func main() {
 
 func Hello(c *fiber.Ctx) error {
 
-	var res entities.Hello
-	res.Ping = "Pong"
+	var res = make(map[string]string)
+
+	res["Ping"] = "Pong"
 
 	return c.JSON(res)
 }

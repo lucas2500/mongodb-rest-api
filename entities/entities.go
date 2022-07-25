@@ -1,9 +1,5 @@
 package entities
 
-type Hello struct {
-	Ping string `json:"Ping"`
-}
-
 // Response structs
 type ProductResponse struct {
 	Code    string `json:"Code"`
