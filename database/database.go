@@ -23,7 +23,7 @@ func InitDatabase() {
 	Client, err = mongo.Connect(DbCtx, options.Client().ApplyURI(MongoURI))
 
 	if err != nil {
-		log.Fatal("There was an error when tryting to connect to MongoDB!!")
+		log.Fatal("There was an error when tryting to connect to MongoDB!! ", err)
 	}
 
 	fmt.Println("Connection established successfully!!")
