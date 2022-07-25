@@ -33,7 +33,7 @@ func DisconnectFromMongo() {
 
 	defer func() {
 		if err := Client.Disconnect(DbCtx); err != nil {
-			log.Fatal("There was an error when trying to disconnect from database!! ", err)
+			log.Fatal("There was an error when trying to disconnect from MongoDB!! ", err)
 		}
 	}()
 }
